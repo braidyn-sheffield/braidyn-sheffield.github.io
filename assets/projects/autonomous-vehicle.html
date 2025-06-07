@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Integration Robot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .project-header {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .project-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .project-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .description {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+    .accordion-button {
+      font-weight: 600;
+    }
+    .project-header {
+  background-color: black;
+  padding: 20px 40px;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+}
+
+.header-home-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.header-home-link:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+
+<header class="project-header">
+  <div class="header-container">
+    <h1>Integration Robot</h1>
+    <a href="../../index.html" class="header-home-link">Home</a>
+  </div>
+</header>
+
+
+  <div class="container py-4">
+
+    <img src="assets/projects/autonomous_vehicle/img/Autonomous_Robot.jpg" alt="Integration Robot" width="500" class="project-image">
+
+    <div class="accordion" id="projectAccordion">
+
+      <!-- Overview Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOverview">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOverview" aria-expanded="true" aria-controls="collapseOverview">
+            Overview
+          </button>
+        </h2>
+        <div id="collapseOverview" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <p>
+              The Integration Robot was developed to autonomously navigate a multi-challenge obstacle course using real-time sensor input and state-driven control logic. It combines ultrasonic distance sensors, TCS230 color sensors, a gyroscope, and servo/DC motors to perform tasks such as line following, object avoidance, and directional turning.
+            </p>
+            <p>
+              Built around the Teensy 4.1 microcontroller and programmed using Arduino C++, the system features modular code for motor control, sensor integration, and navigation states. Custom CAD parts were 3D printed, and a tailored power distribution system was designed using schematics and buck converters. This capstone project demonstrates comprehensive embedded systems integration, from mechanical and electrical design to software architecture and testing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- CAD Models / Engineering Drawings Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCAD">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCAD" aria-expanded="false" aria-controls="collapseCAD">
+            CAD Models / Engineering Drawings
+          </button>
+        </h2>
+        <div id="collapseCAD" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+
+            <p>The robot features a custom chassis, sensor mounts, and servo brackets designed in Autodesk Inventor and fabricated using 3D printing. These drawings illustrate the mechanical design process and part integration.</p>
+
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Bare_Vehicle_Assembly.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 1">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Full_Vehicle_Assembly.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 2">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Front_Sensor_Mount_Drawing.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 3">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Lower_Color_Sensor_Mount_Drawing.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 4">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Main_Plate_Shelve_Drawing.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 5">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Gripper_Spacer_Drawing.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 6">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Secondary_Servo_Spacer.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 7">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Motor_Clamp_Drawing.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 8">
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="assets/projects/autonomous_vehicle/img/Back Plaque.jpg" class="img-fluid rounded shadow-sm" alt="CAD Drawing 9">
+              </div>
+            </div>
+
+            <p class="mt-3">
+              <a href="assets/projects/autonomous_vehicle/files/Autonomous_Robot_CAD_Files.zip" download>Download All CAD Files</a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Schematics Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSchematics">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSchematics" aria-expanded="false" aria-controls="collapseSchematics">
+            Schematics
+          </button>
+        </h2>
+        <div id="collapseSchematics" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+
+            <p>
+              The schematic illustrates the electrical architecture of the robot, including power regulation, sensor connections, microcontroller I/O, and motor driver interfacing. It was designed to ensure modularity and clear signal routing across the robot's subsystems.
+            </p>
+
+            <div class="text-center mb-3">
+              <img src="assets/projects/autonomous_vehicle/img/Schematic V3.0.jpg" class="img-fluid rounded shadow-sm" alt="Schematic Diagram">
+            </div>
+
+            <p>
+              <a href="assets/projects/autonomous_vehicle/files/Schematic V3.0.pdf" download>Download Full Schematic (PDF)</a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- State Diagram / Flowchart Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingStateDiagram">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStateDiagram" aria-expanded="false" aria-controls="collapseStateDiagram">
+            State Diagram / Flowchart
+          </button>
+        </h2>
+        <div id="collapseStateDiagram" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+
+            <p>
+              The robot operates using a state-machine framework to handle tasks like navigation, obstacle avoidance, color recognition, and line-following. The flowchart and state diagram provide a clear visualization of the logic transitions between states, ensuring predictable and testable behavior.
+            </p>
+
+            <div class="text-center mb-3">
+              <img src="assets/projects/autonomous_vehicle/img/State Diagram.jpg" class="img-fluid rounded shadow-sm" alt="State Diagram">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Code Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
+            Code
+          </button>
+        </h2>
+      </div>
+
+      <!-- Photo Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
+            Photos
+          </button>
+        </h2>
+      </div>
+
+      <!-- Videos Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
+            Videos
+          </button>
+        </h2>
+      </div>
+
+      <!-- Final Report Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
+            Final Report / Documentation
+          </button>
+        </h2>
+      </div>
+
+      <!-- Tools Section -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
+            Tools and Technologies Used
+          </button>
+        </h2>
+      </div>
+
+      
+    </div><!-- End Accordion -->
+
+  </div><!-- End Container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
