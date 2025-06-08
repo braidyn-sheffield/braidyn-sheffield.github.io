@@ -1,0 +1,92 @@
+
+duInitMalloc
+MEMORY DUMP
+Memory Block
+Used at 0x635cd645d060 (offset: 0), size: 1008
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Free List
+Block at 0x635cd645d060 (offset: 0), size 1008
+
+duMalloc a0
+MEMORY DUMP
+Memory Block
+Used at 0x635cd645d060 (offset: 0), size: 128
+Free at 0x635cd645d0f0 (offset: 144), size: 864
+AAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Free List
+Block at 0x635cd645d0f0 (offset: 144), size 864
+
+duMalloc a1
+MEMORY DUMP
+Memory Block
+Used at 0x635cd645d060 (offset: 0), size: 128
+Used at 0x635cd645d0f0 (offset: 144), size: 32
+Free at 0x635cd645d120 (offset: 192), size: 816
+AAAAAAAAAAAAAAAAAABBBBBBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Free List
+Block at 0x635cd645d120 (offset: 192), size 816
+
+duMalloc a2
+MEMORY DUMP
+Memory Block
+Used at 0x635cd645d060 (offset: 0), size: 128
+Used at 0x635cd645d0f0 (offset: 144), size: 32
+Used at 0x635cd645d120 (offset: 192), size: 80
+Free at 0x635cd645d180 (offset: 288), size: 720
+AAAAAAAAAAAAAAAAAABBBBBBCCCCCCCCCCCCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Free List
+Block at 0x635cd645d180 (offset: 288), size 720
+
+duMalloc a3
+MEMORY DUMP
+Memory Block
+Used at 0x635cd645d060 (offset: 0), size: 128
+Used at 0x635cd645d0f0 (offset: 144), size: 32
+Used at 0x635cd645d120 (offset: 192), size: 80
+Used at 0x635cd645d180 (offset: 288), size: 120
+Free at 0x635cd645d208 (offset: 424), size: 584
+AAAAAAAAAAAAAAAAAABBBBBBCCCCCCCCCCCCDDDDDDDDDDDDDDDDDaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Free List
+Block at 0x635cd645d208 (offset: 424), size 584
+
+duFree a0
+MEMORY DUMP
+Memory Block
+Free at 0x635cd645d060 (offset: 0), size: 128
+Used at 0x635cd645d0f0 (offset: 144), size: 32
+Used at 0x635cd645d120 (offset: 192), size: 80
+Used at 0x635cd645d180 (offset: 288), size: 120
+Free at 0x635cd645d208 (offset: 424), size: 584
+aaaaaaaaaaaaaaaaaaAAAAAABBBBBBBBBBBBCCCCCCCCCCCCCCCCCbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Free List
+Block at 0x635cd645d060 (offset: 0), size 128
+Block at 0x635cd645d208 (offset: 424), size 584
+
+duFree a2
+MEMORY DUMP
+Memory Block
+Free at 0x635cd645d060 (offset: 0), size: 128
+Used at 0x635cd645d0f0 (offset: 144), size: 32
+Free at 0x635cd645d120 (offset: 192), size: 80
+Used at 0x635cd645d180 (offset: 288), size: 120
+Free at 0x635cd645d208 (offset: 424), size: 584
+aaaaaaaaaaaaaaaaaaAAAAAAbbbbbbbbbbbbBBBBBBBBBBBBBBBBBccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+Free List
+Block at 0x635cd645d060 (offset: 0), size 128
+Block at 0x635cd645d120 (offset: 192), size 80
+Block at 0x635cd645d208 (offset: 424), size 584
+
+duMalloc a4
+MEMORY DUMP
+Memory Block
+Used at 0x635cd645d060 (offset: 0), size: 40
+Free at 0x635cd645d098 (offset: 56), size: 72
+Used at 0x635cd645d0f0 (offset: 144), size: 32
+Free at 0x635cd645d120 (offset: 192), size: 80
+Used at 0x635cd645d180 (offset: 288), size: 120
+Free at 0x635cd645d208 (offset: 424), size: 584
+AAAAAAAaaaaaaaaaaaBBBBBBbbbbbbbbbbbbCCCCCCCCCCCCCCCCCccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+Free List
+Block at 0x635cd645d098 (offset: 56), size 72
+Block at 0x635cd645d120 (offset: 192), size 80
+Block at 0x635cd645d208 (offset: 424), size 584
