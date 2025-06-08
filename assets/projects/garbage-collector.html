@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simulated Garbage Collector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .project-header {
+            background-color: black;
+            padding: 20px 40px;
+            color: white;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-container h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+        }
+        .header-home-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        .header-home-link:hover {
+            text-decoration: underline;
+        }
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .accordion-button {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<header class="project-header">
+    <div class="header-container">
+        <h1>Simulated Garbage Collector</h1>
+        <a href="../../index.html" class="header-home-link">Home</a>
+    </div>
+</header>
+
+<div class="container py-4">
+
+    <img src="assets/projects/garbage_collector/img/Simulated_Garbage_Collector.png" alt="Simulated Garbage Collector" width="500" class="project-image">
+
+    <div class="accordion" id="projectAccordion">
+
+    <!-- Overview Section -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOverview">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOverview" aria-expanded="true" aria-controls="collapseOverview">
+            Overview
+            </button>
+        </h2>
+        <div id="collapseOverview" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+            <div class="accordion-body">
+            <p>This project simulates a Java-style memory manager in C using multiple versions of a custom memory allocator, <code>duMalloc</code>. Over four iterations, features like managed pointers, young generation heaps, and minor/major garbage collection were implemented.</p>
+            <p>Each version incrementally adds memory management complexity to mimic behavior found in high-level managed environments like the JVM. This project demonstrates dynamic memory allocation, garbage collection, and systems-level debugging in C.</p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Code Repository Section -->
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode" aria-expanded="false" aria-controls="collapseCode">
+            Code Repository
+            </button>
+        </h2>
+        <div id="collapseCode" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+            <div class="accordion-body">
+            <p>This project progresses through four structured versions, each introducing key features in a simulated garbage collection system:</p>
+            <ul>
+                <li>
+                <strong><a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/tree/main/assets/projects/assets/projects/garbage_collector/files/v1_dumalloc.c" target="_blank">Version 1</a></strong> – Implements first-fit and best-fit memory allocation strategies with visual memory dumps.<br>
+                <em>Also includes:</em> 
+                <a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/blob/main/assets/projects/assets/projects/garbage_collector/files/version1output_FIRST.txt" target="_blank">Output (FIRST)</a> | 
+                <a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/blob/main/assets/projects/assets/projects/garbage_collector/files/version1output_BEST.txt" target="_blank">Output (BEST)</a>
+                </li>
+                <li>
+                <strong><a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/tree/main/assets/projects/assets/projects/garbage_collector/files/v2_dumalloc.c" target="_blank">Version 2</a></strong> – Introduces the managed pointer system with an indirection layer.<br>
+                <em>Also includes:</em> 
+                <a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/blob/main/assets/projects/assets/projects/garbage_collector/files/version2output.txt" target="_blank">Output</a>
+                </li>
+                <li>
+                <strong><a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/tree/main/assets/projects/assets/projects/garbage_collector/files/v3_dumalloc.c" target="_blank">Version 3</a></strong> – Adds generational garbage collection with a copying collector for young generation heaps.<br>
+                <em>Also includes:</em> 
+                <a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/blob/main/assets/projects/assets/projects/garbage_collector/files/version3output.txt" target="_blank">Output</a>
+                </li>
+                <li>
+                <strong><a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/tree/main/assets/projects/assets/projects/garbage_collector/files/v4_dumalloc.c" target="_blank">Version 4</a></strong> – Implements old generation with in-place memory compaction and survival tracking.<br>
+                <em>Also includes:</em> 
+                <a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/blob/main/assets/projects/assets/projects/garbage_collector/files/version4output.txt" target="_blank">Output</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+
+
+
+        <!-- Tools Section -->
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTools">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools" aria-expanded="false" aria-controls="collapseTools">
+            Tools and Technologies Used
+            </button>
+        </h2>
+        <div id="collapseTools" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+            <div class="accordion-body">
+            <ul>
+                <li><strong>Language:</strong> C</li>
+                <li><strong>Compiler:</strong> GCC</li>
+                <li><strong>Version Control:</strong> Git, GitHub</li>
+                <li><strong>Development Environment:</strong> VS Code, WSL</li>
+                <li><strong>Debugging Tools:</strong> Valgrind</li>
+                <li><strong>Memory Management Concepts:</strong> Heap allocation, minor and major garbage collection, young and old generation heaps</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+
+    </div> <!-- End Accordion -->
+
+</div> <!-- End Container -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
