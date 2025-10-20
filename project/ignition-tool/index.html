@@ -93,8 +93,12 @@
                             <li>Arduino Nano for processing and display control</li>
                             <li>I²C OLED display connection</li>
                         </ul>
-                        <img src="img/ignition-schematic.jpg" class="img-fluid rounded-2xl shadow-sm mb-3" alt="Ignition Schematic"> <!-- TODO -->
-                        <img src="img/ignition-pcb-layout.jpg" class="img-fluid rounded-2xl shadow-sm" alt="PCB Layout"> <!-- TODO -->
+                        <img src="img/ignition-schematic.jpg"
+                        alt="Ignition Schematic"
+                        class="img-fluid rounded-2xl shadow-sm"
+                        style="max-width: 600px; height: auto;">
+                        <img src="img/ignition-layout.jpg" class="img-fluid rounded-2xl shadow-sm" alt="PCB Layout"> 
+                        <img src="img/ignition-3d.jpg" class="img-fluid rounded-2xl shadow-sm" alt="PCB Layout 3D"> 
                     </div>
                 </div>
             </div>
@@ -119,23 +123,29 @@
 
             <!-- Code / Firmware -->
             <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
-                        Code / Firmware
-                    </button>
-                </h2>
-                <div id="collapseCode" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <p>Programmed using Arduino (C++), the firmware:</p>
-                        <ul>
-                            <li>Reads analog voltages from each ignition input channel</li>
-                            <li>Filters the signals and compares voltage differences</li>
-                            <li>Displays voltage levels per channel on the OLED screen</li>
-                        </ul>
-                        <p><em>GitHub link or code upload coming soon.</em></p>
-                    </div>
+            <h2 class="accordion-header" id="headingCode">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode">
+                Code / Firmware
+                </button>
+            </h2>
+            <div id="collapseCode" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                <p>This project was programmed in Arduino (C++) to:</p>
+                <ul>
+                    <li>Read ignition voltage from each sensor input channel</li>
+                    <li>Process and compare voltage levels to detect drops between points</li>
+                    <li>Display live voltage data on the OLED screen</li>
+                </ul>
+                <p class="mb-2">You can view the full code on GitHub below:</p>
+
+                <!-- 🔗 GitHub Link Button -->
+                <a href="https://github.com/braidyn-sheffield/braidyn-sheffield.github.io/blob/main/project/ignition-tool/files/ignition-reader-code.ino" target="_blank" rel="noopener" class="btn btn-outline-primary">
+                    <i class="bi bi-github me-1"></i> View Code on GitHub
+                </a>
                 </div>
             </div>
+            </div>
+
 
             <!-- Tools & Technologies -->
             <div class="accordion-item">
