@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Digital Thermometer — Braidyn Sheffield</title>
+  <meta name="description" content="Arduino Uno shield (bridge PCB) with OLED, MPU6050 auto-rotate, external JST thermometer, and five-button UI for units, calibration (simulated), backlight LED, screen power, and temp lock."/>
+  <meta name="theme-color" content="#0d1117"/>
+
+  <!-- Icons -->
+  <link rel="icon" href="../../assets/icons/logo.png"/>
+  <link rel="apple-touch-icon" href="../../assets/icons/logo.png"/>
+  <link rel="manifest" href="../../assets/icons/site.webmanifest"/>
+
+  <!-- Fonts & CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<header class="header navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-semibold d-flex align-items-center" href="../../index.html">
+      <img src="../../assets/icons/logo.png" alt="Logo" height="64" class="me-2">
+      Braidyn Sheffield
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../../index.html#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+    <nav class="small mb-3">
+      <a href="../../projects.html" class="text-decoration-none">← Back to Projects</a>
+    </nav>
+
+    <!-- Title & Subtitle -->
+    <h1 class="h3">Digital Thermometer</h1>
+    <p class="text-muted">
+      Arduino Uno shield (bridge PCB) with OLED display, MPU6050 auto-rotation, external JST-connected thermometer, and a five-button interface for units, calibration (simulated), backlight (LED simulation), screen power, and temperature lock.
+    </p>
+
+    <!-- Hero Image -->
+    <img class="img-fluid rounded-2xl mb-4 project-hero-img" src="img/dt-hero.jpg" alt="Digital Thermometer PCB and OLED (Hero)"><!-- TODO: replace with your hero photo -->
+
+    <!-- Accordion -->
+    <div class="accordion" id="projectAccordion">
+
+      <!-- Overview -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOverview">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOverview" aria-expanded="true">
+            Overview
+          </button>
+        </h2>
+        <div id="collapseOverview" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <p>
+              This Digital Thermometer is built as an Arduino Uno shield (bridge PCB) that plugs directly into an Uno. It reads temperature from an external sensor connected via a JST header and displays the value on a 0.96″ I²C OLED. The UI is driven by five tactile buttons:
+            </p>
+            <ul>
+              <li><strong>Units:</strong> toggle °C/°F</li>
+              <li><strong>Calibrate:</strong> simulated calibration flow (UI only)</li>
+              <li><strong>Backlight:</strong> simulated backlight using an onboard LED</li>
+              <li><strong>Screen Power:</strong> turn the OLED on/off</li>
+              <li><strong>Lock:</strong> freeze the current reading and show a lock icon</li>
+            </ul>
+            <p>
+              Orientation-aware display is handled with an onboard <strong>MPU6050</strong>—the thermometer rotates the UI based on how you hold the unit. Firmware is written in Arduino (C++) using a clean <strong>state machine</strong> to manage UI states, button events, sensor reads, and display updates.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features & Behavior -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFeatures">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeatures" aria-expanded="false">
+            Features & Behavior
+          </button>
+        </h2>
+        <div id="collapseFeatures" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Live Temperature Display:</strong> continuous read & update on OLED</li>
+              <li><strong>°C/°F Units Toggle:</strong> button quickly switches display units</li>
+              <li><strong>Lock Reading:</strong> freezes current value; lock icon renders on OLED</li>
+              <li><strong>Auto-Rotate UI:</strong> MPU6050 controls screen orientation</li>
+              <li><strong>Simulated Backlight:</strong> onboard LED mirrors backlight behavior</li>
+              <li><strong>Simulated Calibration:</strong> UI routine to illustrate calibration flow</li>
+              <li><strong>Screen Power Control:</strong> button to sleep/wake the display</li>
+              <li><strong>Debounced Input:</strong> firmware state machine handles button debouncing & events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schematics & PCB -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSchematics">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSchematics" aria-expanded="false">
+            Schematics & PCB Layout
+          </button>
+        </h2>
+        <div id="collapseSchematics" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <p>Designed in <strong>KiCad</strong> as an Arduino Uno shield (bridge PCB) with:</p>
+            <ul>
+              <li>0.96″ I²C OLED header</li>
+              <li>MPU6050 (I²C) for orientation</li>
+              <li>External thermometer via JST</li>
+              <li>Five tactile buttons with silkscreen labels</li>
+              <li>Onboard LED as backlight simulation</li>
+            </ul>
+
+            <!-- Schematic (click to open full size) -->
+            <div class="text-center mb-3">
+              <a href="img/dt-schematic.jpg" target="_blank" rel="noopener">
+                <img src="img/dt-schematic.jpg" alt="Digital Thermometer Schematic"
+                     class="img-fluid rounded-2xl shadow-sm"
+                     style="max-width: 70%; height: auto; cursor: zoom-in;">
+              </a>
+              <p class="small text-muted mt-2">Click to view full-resolution schematic</p>
+            </div>
+
+            <!-- PCB Layout -->
+            <div class="text-center">
+              <a href="img/dt-pcb-layout.jpg" target="_blank" rel="noopener">
+                <img src="img/dt-pcb-layout.jpg" alt="Digital Thermometer PCB Layout"
+                     class="img-fluid rounded-2xl shadow-sm"
+                     style="max-width: 70%; height: auto; cursor: zoom-in;">
+              </a>
+              <p class="small text-muted mt-2">Click to view full-resolution PCB layout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Rendering -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRender">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRender" aria-expanded="false">
+            PCB 3D Rendering
+          </button>
+        </h2>
+        <div id="collapseRender" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="img/dt-3d-render.jpg" alt="Digital Thermometer 3D PCB Render"
+                   class="img-fluid rounded-2xl shadow-sm"
+                   style="max-width: 80%; height: auto;"><!-- TODO: replace -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photos -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPhotos">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhotos" aria-expanded="false">
+            Photos
+          </button>
+        </h2>
+        <div id="collapsePhotos" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <figure class="text-center">
+                <img src="img/dt-hero.jpg" class="img-fluid rounded-2xl shadow-sm" alt="Finished PCB (Hero)"><!-- TODO -->
+                <figcaption class="small text-muted mt-2">Finished PCB (Hero)</figcaption>
+              </figure>
+            </div>
+            <!-- Add more photos as needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Code -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCode">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCode" aria-expanded="false">
+            Code / Firmware
+          </button>
+        </h2>
+        <div id="collapseCode" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <p>Arduino (C++) firmware organized as a state machine:</p>
+            <ul>
+              <li>Reads external thermometer and converts to °C/°F</li>
+              <li>Debounces five UI buttons and handles events</li>
+              <li>Controls OLED: live display, lock icon, screen on/off</li>
+              <li>Uses MPU6050 to rotate the UI based on device orientation</li>
+              <li>Simulated calibration and backlight behaviors</li>
+            </ul>
+            <p class="mb-2">View the full code on GitHub:</p>
+            <a href="https://github.com/USERNAME/REPOSITORY_PATH" target="_blank" rel="noopener" class="btn btn-outline-primary">
+              <i class="bi bi-github me-1"></i> View Code on GitHub
+            </a><!-- TODO: replace with your repo/link -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Technologies -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTools">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools" aria-expanded="false">
+            Tools & Technologies
+          </button>
+        </h2>
+        <div id="collapseTools" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Platform:</strong> Arduino Uno (shield / bridge PCB)</li>
+              <li><strong>Display:</strong> 0.96″ I²C OLED</li>
+              <li><strong>Orientation:</strong> MPU6050 (I²C)</li>
+              <li><strong>Thermometer:</strong> External sensor via JST connector</li>
+              <li><strong>UI:</strong> Five tactile buttons (units, calibrate, backlight LED, screen power, lock)</li>
+              <li><strong>Firmware:</strong> Arduino (C++) state machine</li>
+              <li><strong>PCB Design:</strong> KiCad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </div>
+</main>
+
+<footer class="py-4 mt-5 border-top">
+  <div class="container text-center text-muted small">
+    © <span id="year"></span> Braidyn Sheffield • Built with Bootstrap
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

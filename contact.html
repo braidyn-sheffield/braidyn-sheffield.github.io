@@ -3,89 +3,92 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Projects — Braidyn Sheffield</title>
-  <meta name="description" content="Portfolio of Braidyn Sheffield"/>
+  <title>Contact — Braidyn Sheffield</title>
+  <meta name="description" content="Contact page for Braidyn Sheffield"/>
   <meta name="theme-color" content="#0d1117"/>
+
   <!-- Icons -->
   <link rel="icon" href="assets/icons/logo.png"/>
   <link rel="apple-touch-icon" href="assets/icons/logo.png"/>
   <link rel="manifest" href="assets/icons/site.webmanifest"/>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap & Icons (CDN) -->
+
+  <!-- Fonts & CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="index-page">
-<header id="header" class="header navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-semibold d-flex align-items-center" href="../../index.html">
-    <img src="assets/icons/logo.png" alt="Logo" height="64" class="me-2">
-    Braidyn Sheffield
-</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+<body class="index-page">
+
+<header class="header navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-semibold d-flex align-items-center" href="index.html">
+      <img src="assets/icons/logo.png" alt="Logo" height="64" class="me-2">
+      Braidyn Sheffield
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <nav id="nav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main class="py-5">
-  <div class="container">
-    <div class="row g-5 align-items-start">
-      <div class="col-12 col-lg-7">
-        <h1 class="h3 mb-3">About Me</h1>
-        <p class="text-muted">
-          I’m a Computer Engineering student at the University of Denver focusing on embedded systems,
-          robotics, and analytical instrumentation. I enjoy taking ideas from whiteboard to working prototypes.
-        </p>
-        <h2 class="h6 mt-4">Skills</h2>
-        <ul class="text-muted">
-          <li>Embedded C/C++, Arduino, STM32</li>
-          <li>Python (data, tooling), C for systems</li>
-          <li>PCB design & fabrication</li>
-          <li>Robotics: sensors, state machines, control</li>
-        </ul>
-        <a class="btn btn-primary" href="assets/files/Braidyn_Sheffield_Resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-file-earmark-text me-1"></i> Resume
-        </a>
+  <div class="container text-center">
+    <h1 class="h3 mb-3">Let’s Connect</h1>
+    <p class="text-muted mb-4" style="max-width: 600px; margin: auto;">
+      Whether you want to talk about engineering, robotics, PCB design, or potential collaboration — feel free to reach out.
+    </p>
 
-      </div>
-      <div class="col-12 col-lg-5">
-        <div class="card shadow-soft">
-          <div class="card-body">
-            <h2 class="h6 mb-3">Contact</h2>
-            <ul class="list-unstyled text-muted">
-              <li><i class="bi bi-envelope me-2"></i><a href="mailto:you@example.com">you@example.com</a></li>
-              <li><i class="bi bi-github me-2"></i><a href="https://github.com/yourusername">github.com/yourusername</a></li>
-              <li><i class="bi bi-geo-alt me-2"></i>Denver, CO</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <!-- Contact Buttons -->
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="mailto:braidyn.sheffield@gmail.com" class="btn btn-primary">
+        <i class="bi bi-envelope-fill me-1"></i> Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/braidyn-sheffield" class="btn btn-outline-primary" target="_blank" rel="noopener">
+        <i class="bi bi-linkedin me-1"></i> LinkedIn
+      </a>
+      <a href="https://github.com/braidyn-sheffield" class="btn btn-outline-light" target="_blank" rel="noopener">
+        <i class="bi bi-github me-1"></i> GitHub
+      </a>
+      <a class="btn btn-outline-primary" href="assets/files/Braidyn_Sheffield_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf me-1"></i> Resume
+      </a>
     </div>
+
+    <!-- Optional: Contact Form (non-functional without backend) -->
+    <!-- Uncomment if you'd like to include form later -->
+    <!--
+    <form action="mailto:braidyn.sheffield@gmail.com" method="post" enctype="text/plain" class="mt-5" style="max-width: 600px; margin: auto;">
+      <div class="mb-3">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    -->
   </div>
 </main>
+
 <footer class="py-4 mt-5 border-top">
   <div class="container text-center text-muted small">
-    <div>© <span id="year"></span> Braidyn Sheffield • Built with Bootstrap</div>
+    © <span id="year"></span> Braidyn Sheffield • Built with Bootstrap
   </div>
 </footer>
+
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Main JS -->
-<script src="assets/js/main.js"></script>
 </body>
 </html>
